@@ -1,0 +1,56 @@
+This is the original work of Chaitanya Garg 2021248
+To get the code running make -f MakeFile in the file OSsheel itself
+To remove the output files make -f MakeFile clean can be used after running the above main cmd
+The commands have been implemented to have as similar a functionality to the original cmds as possible
+
+
+Commands that have implemented:
+
+Internal Commands:
+    cd
+        Usage : cd [dir]
+        Changes directory to as per requirement
+        cd : takes to root directory
+        cd ~ : takes to root directory
+        cd .. : takes to parent directory
+    echo
+        Usage : echo [-n] [*]
+                echo [-n] [*] [STRING] 
+        echo :Displays text as specified
+        echo -n : Does not output trailing line
+        echo * : Lists all the files in a particular directory
+
+    pwd
+        Usage : pwd [-L] [-P]
+        Displays current working directory
+        pwd -L : displays symlinks if any in cwd
+        pwd -P : Displays current working directory
+
+External Commands:
+    ls
+        Usage : ls [-r] [-m]
+        Lists file in specified or current directory
+        ls -m : Lists all files and separates them via a ','
+        ls -r : Sorts the list in reverse order
+    cat
+        Usage : cat [-E] [-n] [file name]
+                cat [-E] [-n]
+        Displays text from stdout or file as per need 
+        cat -E : Displays $ at the end of each line
+        cat -n : Numbers all output lines
+    date
+        Usage : date [-u]
+                date [-r] [file/directory]
+        Shows system date and time
+        date -u : Shows UTC time
+        date -r FileName : Displays the last Modification Time of the particular File/Directory
+    rm 
+        Usage : rm [-i] [-f] [file/directory name]
+        Removes files as specified
+        rm -f : Force Removal doesn't prompt if a file is not found
+        rm -d : Removes empty directories
+    mkdir
+        Usage : mkdir [-p] [-v] [file name]
+        Makes new directories
+        mkdir -p : Make parent directories as needed
+        mkdir -v : Prints message for each created directory
